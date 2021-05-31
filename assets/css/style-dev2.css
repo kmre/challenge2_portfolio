@@ -4,132 +4,71 @@
     margin: 0;
 }
 
+/*Main variables*/
 :root {
     --color1: rgb(98, 0, 128);
     --color2: #024e76;
     --color3: #39a6b2;
     --color4: rgb(205, 248, 255);
+    --font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
-
 
 /*kmre: Body Style just background color*/
 body {
     background-color: var(--color4);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
-
 /*kmre: Header includes Hori---n*/
 header {
-    padding: 2% 3%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 15px 20px;
+    font-family: var(--font);
     background-color: var(--color2);
-    /*kmre: flex added to allow the navi to stay within the header section*/  
     display: flex;
     justify-content: space-between;
-    color: white;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--color4);    
 }
 header div {
     padding: 1%;
+    flex: 1;
 }
-/*header h1 {
-    display: inline-block;
-    font-size: 48px;
-}*/
 /*kmre: Header style for the navigation section*/
 header nav {
-    padding-top: 15px;
-    margin-right: 20px;
-    /*kmre: margin-left added for the flex display to look like original*/
-    margin-left: 25px;
-    float: right;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+    padding: 0 0 10px 0;
+    font-family: var(--font);
+    font-size: 23px;
     list-style-type: none;
+    align-self: flex-end;
+    flex: 1.5;
+    display: flex;
+}
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap; 
 }
 header nav ul li {
-    display: inline-block;
-    margin-left: 25px;
+    display: flex;
+    margin: 0 10px;
 }
+
 /*kmre: Colors every a element inside header*/
+header h1 {
+    justify-content: center;
+}
 header a {
-    color: #ffffff;
+    color: var(--color4);
     text-decoration: none;
 }
 /*kmre: end header style*/
 
-/*kmre: Hero section image*/
-.hero {
-    height: 300px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("../images/website-1624028.svg");
-    background-size: cover;
-    background-position: center;
+main {
+    flex: 1;
 }
-/*kmre: End Hero section*/
-
-/*kmre: Style section for left section*/
-.content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-}
-article {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-article img {
-    max-height: 200px;
-}
-article h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-article p {
-    font-size: 16px;
-}
-/*kmre: Classes for the image to float left or right*/
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-/*kmre: End float and left section*/
-
-/*kmre: Start right side section for Benefits*/
-aside {
-    margin-right: 20px;
-    padding: 20px;
-    clear: both;
-    float: right;
-    width: 20%;
-    height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #2589bd;
-}
-aside section {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-aside section h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-aside img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-aside p {
-    font-size: 16px;
-}
-/*kmre: End right side section*/
 
 /*kmre: Start footer*/
 footer{
@@ -137,6 +76,7 @@ footer{
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    width: 100%;
 }
 footer h2 {
     font-size: 20px;
@@ -148,6 +88,10 @@ footer p {
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
+  /*  .hero {
+        height: 200px;
+    }*/
+
     /*header {
       padding-bottom: 0;
       justify-content: center;
@@ -219,22 +163,21 @@ footer p {
   
   /* MEDIA QUERY FOR TABLETS AND SMALLER */
   @media screen and (max-width: 768px) {
-      header {
+     /* header {
         display: flex;
         flex-flow: column wrap;
-        justify-content: center;
-        text-align: center;
-        flex: 100%
       }
-      header div {
-        padding: 10px;
-        flex: 25%;      
-      }
-      header nav {
-        padding: 10px;
-        flex: 0 75% ;
+    
+      .hero {
+          height: 175px;
       }
       
+        .subtitle {
+            padding: 2%;
+            font-size: 15px;
+        }*/
+
+
 
     /*section {
       padding: 30px 15px;
@@ -265,6 +208,13 @@ footer p {
   
   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
   @media screen and (max-width: 575px) {
+   /* header nav {
+        font-size: 15px;
+    }
+    .hero {
+        height: 150px;
+    }*/
+
    /* .hero-form button {
       width: 100%;
     }

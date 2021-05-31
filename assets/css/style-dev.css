@@ -16,6 +16,9 @@
 /*kmre: Body Style just background color*/
 body {
     background-color: var(--color4);
+    display: flex;
+    flex-direction: column;
+
 }
 /*kmre: Header includes Hori---n*/
 header {
@@ -26,6 +29,7 @@ header {
     justify-content: space-between;
     align-items: center;    
     color: white;
+    width: 100%;
 }
 header div {
     padding: 1%;
@@ -53,26 +57,47 @@ header a {
 }
 /*kmre: end header style*/
 
+main {
+    flex: 1;
+}
 /*kmre: Hero section image*/
 .hero {
     background-image: url("../images/website-1624028.svg");
     background-size: cover;
     display: flex;
-    justify-content: flex-end;
-    flex-flow: column;
+    justify-content: space-between;
+    flex-flow: row;
     align-items: flex-end;
     background-position: center;
     height: 255px;
-    padding: 2% 10%;
+    padding: 25px 25px;
+    background-attachment: scroll;
+}
+.div-picture {
+    height: 225px;
+    padding-left: 20px;
+}
+ .div-picture img {
+    min-width: 100%;
+    max-height: 100%;   
+    border: azure solid 5px;
+    padding: 1% 1%;
+    object-fit: cover;
+}
+.subtitle {
+    background-color: azure;
+    flex: 0 50%;
 }
 
-.subtitle {
-    padding: 2%;
-    font-family: var(--font);
-    font-size: 20px;
-    color: var(--color1);
-    background-color: powderblue;
-}
+    /* background-image: url("../images/puerto-rico-26990.svg"); */
+    /* background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+    align-items: flex-start;
+    background-position: center;
+    background-attachment: scroll; 
+}*/
 
 /*kmre: End Hero section*/
 
@@ -146,6 +171,7 @@ footer{
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    width: 100%;
 }
 footer h2 {
     font-size: 20px;
@@ -160,6 +186,7 @@ footer p {
     .hero {
         height: 200px;
     }
+
     /*header {
       padding-bottom: 0;
       justify-content: center;
