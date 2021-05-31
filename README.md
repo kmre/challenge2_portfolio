@@ -10,6 +10,18 @@ In this Challenge you’ll set yourself up for future success by applying the co
  - Media queries 
  - CSS variables.
 
+ Must have:
+
+    - Developer's name
+    - Recent photo or avatar
+    - Links to sections about them
+        - Include Navigation to the sections
+        - Link takes to the section with titled images of the applications
+    - How to contact them
+    - On the application's section when hovering over image the image should 
+        be larger in size than the others
+    - When clicking on the image it takes you to their deployed applications
+    - Page viewable in different devices/sizes
 
 Things added:
 
