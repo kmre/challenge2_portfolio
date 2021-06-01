@@ -82,10 +82,10 @@ body {
     justify-content: space-around;
 }
 .smaller-devices {
-    flex: 1;
+    /* flex: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
     margin-right: -15px;
     margin-left: -15px; 
 }
@@ -105,7 +105,6 @@ flex: 0 0 100%;
 section {
     margin-bottom: 3%;
 }
-
 /*kmre: Start footer*/
 .footer {
     padding: 15px 5%;
@@ -162,23 +161,24 @@ section {
     justify-content: space-between;
 }
 .div-picture {
-    flex: 0 0 50%;
+    flex: 0 0 35%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1%;
 }
-
 .div-picture img {
     max-width: 50%;
     padding: 5px 5px;
     border: azure solid 5px;
 }
 .subtitle {
+    /*kmre: Using flex to make a box for the background*/
     display: flex;
     justify-content: flex-end;
     align-self: flex-end;
     padding: 0 2% 0 0;
+    flex: 0 0 65%;
 }
 .font {
     font-size: small;

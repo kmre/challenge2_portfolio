@@ -51,7 +51,8 @@
     
     <!--kmre: Wraps around all elements to control width, paddings and margins -->
         <div class="main">
-            <!--kmre: Class to change flex depending on the device-->
+            <!--kmre: Add negative margin for when the screen is smaller the inside boxes
+            are not as small -->
             <div class="smaller-devices">
                 <!--kmre: Primary column-->
                 <div class="primary col1">
@@ -64,37 +65,34 @@
                                 <h2>Newbie coder extraordinare! &#128517; </h2> 
                             </div>
                         </section>
-                            
+                            <!--kmre: Content Section-->
                         <section class="content">
                             <!--kmre: Sub-section 1 for About me-->
-                            <div>
-                                <!--kmre:Left side article-->
-                                <article id="about-me">
-                                            <!--Need to add an image/Still debating if img or svg-->
-                                        <!-- <img src="./assets/images/search-engine-optimization.jpg" class="float-left" alt="Search Engine Image"/> -->
-                                </article>
-                                    <!--kmre: Right side article-->  
-                                <article>
-                                    <h2>About Me</h2>
-                                    <p>
-                                        Write about me here.
-                                    </p>   
-                                </article>                  
-                            </div>  
-                                <!--kmre: Sub-section 2 for About me-->
-                                <div>
-                                    <!--kmre:Left side article-->
-                                    <article id="work">
-                                        <!-- <img src="./assets/images/online-reputation-management.jpg" class="float-right" alt="Online Reputation Image"/>            -->
-                                    </article>        
-                                    <!--kmre: Right side article-->                
-                                    <article>
-                                        <h2>My Work</h2>
+                            <article id="about-me">
+                                    <!--kmre:Left side-->          
+                                     <div>     
+                                        <h2>About Me</h2>
+                                    </div>
+                                    <!--kmre: Right side-->
+                                    <div>   
                                         <p>
-                                            Write here about my work. Will have more divs for the work images and links.
+                                            Write about me here.
                                         </p>
-                                    </article>
+                                    </div>                    
+                            </article>  
+                            <!--kmre: Sub-section 2 for Work>-->
+                            <article id="work">
+                                <!--kmre:Left side-->          
+                                <div>     
+                                    <h2>Work</h2>
                                 </div>
+                                <!--kmre: Right side-->
+                                <div>   
+                                    <p>
+                                        More boxes with Work
+                                    </p>
+                                </div>                    
+                            </article>  
                         </section>
                 </div>
             </div>
