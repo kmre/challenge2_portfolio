@@ -1,4 +1,4 @@
-*, ::after, ::before {
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -16,12 +16,12 @@
 /*kmre: Body Style just background color*/
 body {
     background-color: var(--color4);
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    flex-wrap: wrap; */
+    flex-wrap: wrap;
 }
 /*kmre: Header includes Hori---n*/
-header {
+.headers {
     padding: 15px 5%;
     font-family: var(--font);
     background-color: var(--color2);
@@ -30,14 +30,14 @@ header {
     align-items: center;
     flex-wrap: wrap;
     color: var(--color4); 
-    /*width: 100%;*/
+    width: 100%;
 }
-header div {
+.headers div {
     padding: 1%;
     flex: 3;
 }
 /*kmre: Header style for the navigation section*/
-header nav {
+.headers nav {
     padding: 0 0 10px 0;
     font-family: var(--font);
     font-size: 23px;
@@ -48,13 +48,13 @@ header nav {
     justify-content: flex-end;
     flex: 5;
 }
-header nav ul {
+.headers nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap; 
 }
-header nav ul li {
+.headers nav ul li {
     display: flex;
     margin: 0 10px;
 }
@@ -62,12 +62,14 @@ header nav ul li {
     justify-content: center;
 } */
 /*kmre: Colors every a element inside header*/
-header a {
+.headers a {
     color: var(--color4);
     text-decoration: none;
 }
 /*kmre: end header style*/
+/*Main will allow the "body minus header and footer" to take the most available space*/
 .main {    
+    flex: 1;
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -75,18 +77,16 @@ header a {
     margin-left: auto;
     display: flex;
     flex-flow: row wrap;
-}
-.wrapper {
     padding-top: 60px;
     padding-bottom: 60px;
 }
 .smaller-devices {
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex: 1;
     margin-right: -15px;
-    margin-left: -15px;
+    margin-left: -15px; 
 }
 .primary {
 position: relative;
@@ -112,7 +112,7 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     color: var(--color4); 
-    /*width: 100%;*/
+    width: 100%;
 }
 footer div {
     padding: 1%;
@@ -179,40 +179,44 @@ footer a {
     padding: 5px 5px;    
     background-color: azure;
 }
-footer a {
-    color: var(--color4);
-    text-decoration: none;
-}
+
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 
-@media screen and (max-width: 1400px) {
-    .main {
+@media screen and (max-width: 2000px) {
+    body {
+        width: 100%;
+        height: 100%;
         max-width: inherit;
     }
 }
 @media screen and (max-width: 1200px) {
-    .main {
-        max-width: 1140px;
+    body {
+        /* max-width: 1140px; */
+        max-width: 100%;
     }
 }
 @media screen and (max-width: 992px) {
-    .main {
-        max-width: 960px;
+    body {
+        /* max-width: 960px; */
+        max-width: 100%;
     }
 }
 @media screen and (max-width: 862px) {
-    .main {
-        max-width: 850px;
+    body {
+        /* max-width: 850px; */
+        max-width: 100%;
     }
 }
 @media screen and (max-width: 768px) {
-    .main {
-        max-width: 720px;
+    body {
+        /* max-width: 720px; */
+        max-width: 100%;
     }
 }
 @media screen and (max-width: 576px) {
-    .main {
-        max-width: 540px;
+    body {
+        /* max-width: 540px; */
+        max-width: 100%;
     }
 }
