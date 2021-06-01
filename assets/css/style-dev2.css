@@ -77,8 +77,9 @@ body {
     margin-left: auto;
     display: flex;
     flex-flow: row wrap;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    justify-content: space-around;
 }
 .smaller-devices {
     flex: 1;
@@ -90,20 +91,23 @@ body {
 }
 .primary {
 position: relative;
-width: 100%;
+max-width: 100%;
 padding-right: 15px;
 padding-left: 15px;
+display: flex;
+flex: 1;
+flex-flow: column wrap;
 }
 .col1 {
-flex: 0 0 66.66%;
-max-width: 66.66%;
+flex: 0 0 100%;
+/* max-width: 66.66%; */
 }
 section {
-    margin-bottom: 30px;
+    margin-bottom: 3%;
 }
 
 /*kmre: Start footer*/
-footer {
+.footer {
     padding: 15px 5%;
     font-family: var(--font);
     background-color: var(--color2);
@@ -114,11 +118,11 @@ footer {
     color: var(--color4); 
     width: 100%;
 }
-footer div {
+.footer div {
     padding: 1%;
     flex: 3;
 }
-footer nav {
+.footer nav {
     padding: 0 0 10px 0;
     font-family: var(--font);
     font-size: 23px;
@@ -129,17 +133,17 @@ footer nav {
     justify-content: flex-end;
     flex: 5;
 }
-footer nav ul {
+.footer nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap; 
 }
-footer nav li {
+.footer nav li {
     display: flex;
     margin: 0 10px;
 }
-footer a {
+.footer a {
     color: var(--color4);
     text-decoration: none;
 }
@@ -149,14 +153,16 @@ footer a {
 .hero {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     padding: 2%;
     background-image: url("../images/website-1624028.svg");
     background-position: center;
     width: 100%;
+    flex: 0 0 75%;
+    justify-content: space-between;
 }
 .div-picture {
-    flex: 1;
+    flex: 0 0 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,16 +170,18 @@ footer a {
 }
 
 .div-picture img {
-    width: 50%;
+    max-width: 50%;
     padding: 5px 5px;
     border: azure solid 5px;
 }
 .subtitle {
-    flex: 2;
     display: flex;
     justify-content: flex-end;
     align-self: flex-end;
     padding: 0 2% 0 0;
+}
+.font {
+    font-size: small;
 }
 .subtitle h2 {
     padding: 5px 5px;    
