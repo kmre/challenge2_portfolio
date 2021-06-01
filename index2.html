@@ -48,61 +48,82 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <!--kmre: Hero Section has image and subtitle-->
-        <section class="hero">
-            <div class="div-picture">
-                <img src="../challenge_2/assets/images/Screenshot 2021-05-30 205730.png" alt="My picture">
-            </div>
-            <div class="subtitle">
-                <h2>Newbie coder extraordinare! &#128517; </h2> 
-            </div>
-        </section>
-            <!--kmre: Sections with separate articles for content-->
-        <section class="content">
-            <!--kmre: Sub-section 1 for About me-->
-            <div>
-                <!--kmre:Left side article-->
-                <article id="about-me">
-                            <!--Need to add an image/Still debating if img or svg-->
-                        <!-- <img src="./assets/images/search-engine-optimization.jpg" class="float-left" alt="Search Engine Image"/> -->
-                </article>
-                    <!--kmre: Right side article-->  
-                <article>
-                    <h2>About Me</h2>
-                    <p>
-                        Write about me here.
-                    </p>   
-                </article>                  
-            </div>  
-                <!--kmre: Sub-section 2 for About me-->
-                <div>
-                    <!--kmre:Left side article-->
-                    <article id="work">
-                        <!-- <img src="./assets/images/online-reputation-management.jpg" class="float-right" alt="Online Reputation Image"/>            -->
-                    </article>        
-                    <!--kmre: Right side article-->                
-                    <article>
-                        <h2>My Work</h2>
-                        <p>
-                            Write here about my work. Will have more divs for the work images and links.
-                        </p>
-                    </article>
+    
+    <!--kmre: Wraps around all elements to control width, paddings and margins -->
+        <div class="main wrapper">
+            <!--kmre: Class to change flex depending on the device-->
+            <div class="smaller-devices">
+                <!--kmre: Primary column-->
+                <div class="primary col1 col2">
+                        <!--kmre: Hero Section has image and subtitle-->
+                        <section class="hero">
+                            <div class="div-picture">
+                                <img src="../challenge_2/assets/images/Screenshot 2021-05-30 205730.png" alt="My picture">
+                            </div>
+                            <div class="subtitle">
+                                <h2>Newbie coder extraordinare! &#128517; </h2> 
+                            </div>
+                        </section>
+                            
+                        <section class="content">
+                            <!--kmre: Sub-section 1 for About me-->
+                            <div>
+                                <!--kmre:Left side article-->
+                                <article id="about-me">
+                                            <!--Need to add an image/Still debating if img or svg-->
+                                        <!-- <img src="./assets/images/search-engine-optimization.jpg" class="float-left" alt="Search Engine Image"/> -->
+                                </article>
+                                    <!--kmre: Right side article-->  
+                                <article>
+                                    <h2>About Me</h2>
+                                    <p>
+                                        Write about me here.
+                                    </p>   
+                                </article>                  
+                            </div>  
+                                <!--kmre: Sub-section 2 for About me-->
+                                <div>
+                                    <!--kmre:Left side article-->
+                                    <article id="work">
+                                        <!-- <img src="./assets/images/online-reputation-management.jpg" class="float-right" alt="Online Reputation Image"/>            -->
+                                    </article>        
+                                    <!--kmre: Right side article-->                
+                                    <article>
+                                        <h2>My Work</h2>
+                                        <p>
+                                            Write here about my work. Will have more divs for the work images and links.
+                                        </p>
+                                    </article>
+                                </div>
+                        </section>
                 </div>
-        </section>
-    </main>        
+            </div>
+        </div>
+    <!-- </div>         -->
     <!--kmre: Footer section-->
     <footer>
         <div id="contact-me"></div>
-            <h3>
+            <h1>
                 Contact Me
-            </h3>
-        <div>
-            <p>
-                Contact information here.
-            </p>
-        </div>
-    
+            </h1>
+        <nav>
+            <!--kmre: Unordered List element-->
+            <ul>
+                <!--kmre: List Items with reference elements-->
+                <li>
+                    <a href="#about-me" title="Click here to go to the About Me Section.">About Me</a>
+                </li>
+                <li>
+                    <a href="#work" title="Click here to go to my Work Section.">Work</a>
+                </li>
+                <li>
+                    <a href="#contact-me" title="Click here to go to my contact information.">Contact Me</a>
+                </li>
+                <li>
+                    <a href="#resume" title="Click here to download my resume.">Resume</a>
+                </li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>

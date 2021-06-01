@@ -1,4 +1,4 @@
-* {
+*, ::after, ::before {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -14,12 +14,12 @@
   }
 
 /*kmre: Body Style just background color*/
-body {
+/* body {
     background-color: var(--color4);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-}
+} */
 /*kmre: Header includes Hori---n*/
 header {
     padding: 15px 5%;
@@ -30,6 +30,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
     color: var(--color4); 
+    /*width: 100%;*/
 }
 header div {
     padding: 1%;
@@ -46,7 +47,6 @@ header nav {
     align-self: flex-end;
     align-content: flex-end;
     flex: 5;
-
 }
 header nav ul {
     display: flex;
@@ -58,51 +58,98 @@ header nav ul li {
     display: flex;
     margin: 0 10px;
 }
-
-/*kmre: Colors every a element inside header*/
 header h1 {
     justify-content: center;
 }
+/*kmre: Colors every a element inside header*/
 header a {
     color: var(--color4);
     text-decoration: none;
 }
 /*kmre: end header style*/
-
-main {
-    flex: 1;
+.main {    
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.smaller-devices {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.primary {
+position: relative;
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+}
+.col1 {
+flex: 0 0 66.66%;
+max-width: 66.66%;
+}
+section {
+    margin-bottom: 30px;
 }
 
 /*kmre: Start footer*/
-footer{
-    padding: 30px;
-    clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    width: 100%;
+footer {
+    padding: 15px 5%;
+    font-family: var(--font);
+    background-color: var(--color2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--color4); 
+    /*width: 100%;*/
 }
-footer h2 {
-    font-size: 20px;
+footer h3 {
+    padding: 1%;
+    flex: 3;
 }
-footer p {
-    font-size: 16px;
+footer nav {
+    padding: 0 0 10px 0;
+    font-family: var(--font);
+    font-size: 23px;
+    list-style-type: none;
+    display: flex;
+    flex-flow: column wrap;
+    align-self: flex-end;
+    align-content: flex-end;
+    flex: 5;
+}
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap; 
+}
+footer nav li {
+    display: flex;
+    margin: 0 10px;
 }
 /*kmre: End footer*/
 
 /*Hero section*/
 .hero {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: center;
     padding: 2%;
     background-image: url("../images/website-1624028.svg");
     background-position: center;
+    width: 100%;
 }
 .div-picture {
-    display: flex;
     flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 1%;
@@ -124,162 +171,41 @@ footer p {
     padding: 5px 5px;    
     background-color: azure;
 }
-
+footer a {
+    color: var(--color4);
+    text-decoration: none;
+}
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
-@media screen and (max-width: 980px) {
-  /*  .hero {
-        height: 200px;
-    }*/
 
-    /*header {
-      padding-bottom: 0;
-      justify-content: center;
-      position: relative;
+@media screen and (max-width: 1400px) {
+    .main {
+        width: 1360px;
+        max-width: inherit;
     }
-  
-    header h1 {
-      width: 100%;
-      text-align: center;
+}
+@media screen and (max-width: 1200px) {
+    .main {
+        max-width: 1140px;
     }
-  
-    header nav ul {
-      margin-top: 20px;
-      width: 100%;
-      justify-content: center;
+}
+@media screen and (max-width: 992px) {
+    .main {
+        max-width: 960px;
     }
-  
-    header nav ul li a {
-      font-size: 20px;
+}
+@media screen and (max-width: 992px) {
+    .main {
+        max-width: 960px;
     }
-  
-    footer h2, footer div {
-      text-align: center;
-      width: 100%;
-    }  header {
-      padding-bottom: 0;
-      justify-content: center;
+}
+@media screen and (max-width: 768px) {
+    .main {
+        max-width: 720px;
     }
-  
-    header h1 {
-      width: 100%;
-      text-align: center;
+}
+@media screen and (max-width: 576px) {
+    .main {
+        max-width: 540px;
     }
-  
-    header nav ul {
-      margin-top: 20px;
-      width: 100%;
-      justify-content: center;
-    }
-  
-    header nav ul li a {
-      font-size: 20px;
-    }
-  
-    footer h2, footer div {
-      text-align: center;
-      width: 100%;
-    }
-    
-    .hero-cta, .hero-form {
-      width: 100%;
-    }
-    
-    .hero-cta {
-      text-align: center;
-    }
-    .section-title {
-      width: 80%;
-    }
-    
-    .trainer {
-      flex: 0 70%;
-    }
-    
-    .contact-info iframe{
-      flex: 1 100%;
-    }*/
-  }
-  
-  /* MEDIA QUERY FOR TABLETS AND SMALLER */
-  @media screen and (max-width: 768px) {
-     /* header {
-        display: flex;
-        flex-flow: column wrap;
-      }
-    
-      .hero {
-          height: 175px;
-      }
-      
-        .subtitle {
-            padding: 2%;
-            font-size: 15px;
-        }*/
-
-
-
-    /*section {
-      padding: 30px 15px;
-    }
-    .step h3 {
-      flex: 1 100%;
-      text-align: center;
-    }
-  
-    .step-info {
-      flex: 2 100%;
-      text-align: center;
-      justify-content: center;
-    }
-  
-    .step-img {
-      flex: 0 32%;
-      margin-right: 0;
-      margin-top: 15px;
-      margin-bottom: 15px;
-    }
-  
-    .step-text {
-      flex: 100%;  
-    }
-  */
-  }
-  
-  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
-  @media screen and (max-width: 575px) {
-   /* header nav {
-        font-size: 15px;
-    }
-    .hero {
-        height: 150px;
-    }*/
-
-   /* .hero-form button {
-      width: 100%;
-    }
-  
-    .section-title {
-      width: 95%;
-    }
-  
-    .intro p {
-      width: 100%;
-    }
-  
-    .trainer {
-      flex: 0 100%;
-    }
-  
-    .contact-info {
-      text-align: center;
-    }
-  
-    .contact-info > * {
-      flex: 0 100%;
-    }
-  
-    .contact-form {
-      order: 3;
-    }*/
-  }
+}
