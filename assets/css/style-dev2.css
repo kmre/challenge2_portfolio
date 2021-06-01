@@ -21,7 +21,7 @@ body {
     flex-wrap: wrap;
 }
 /*kmre: Header includes Hori---n*/
-.headers {
+header {
     padding: 15px 5%;
     font-family: var(--font);
     background-color: var(--color2);
@@ -32,12 +32,12 @@ body {
     color: var(--color4); 
     width: 100%;
 }
-.headers div {
+header div {
     padding: 1%;
     flex: 3;
 }
 /*kmre: Header style for the navigation section*/
-.headers nav {
+header nav {
     padding: 0 0 10px 0;
     font-family: var(--font);
     font-size: 23px;
@@ -48,13 +48,13 @@ body {
     justify-content: flex-end;
     flex: 5;
 }
-.headers nav ul {
+header nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap; 
 }
-.headers nav ul li {
+header nav ul li {
     display: flex;
     margin: 0 10px;
 }
@@ -62,7 +62,7 @@ body {
     justify-content: center;
 } */
 /*kmre: Colors every a element inside header*/
-.headers a {
+header a {
     color: var(--color4);
     text-decoration: none;
 }
@@ -106,7 +106,7 @@ section {
     margin-bottom: 3%;
 }
 /*kmre: Start footer*/
-.footer {
+footer {
     padding: 15px 5%;
     font-family: var(--font);
     background-color: var(--color2);
@@ -117,11 +117,11 @@ section {
     color: var(--color4); 
     width: 100%;
 }
-.footer div {
+footer div {
     padding: 1%;
     flex: 3;
 }
-.footer nav {
+footer nav {
     padding: 0 0 10px 0;
     font-family: var(--font);
     font-size: 23px;
@@ -132,17 +132,17 @@ section {
     justify-content: flex-end;
     flex: 5;
 }
-.footer nav ul {
+footer nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: row wrap; 
 }
-.footer nav li {
+footer nav li {
     display: flex;
     margin: 0 10px;
 }
-.footer a {
+footer a {
     color: var(--color4);
     text-decoration: none;
 }
@@ -159,26 +159,28 @@ section {
     width: 100%;
     flex: 0 0 75%;
     justify-content: space-between;
+    /* background-position: -178px -266px; */
 }
-.div-picture {
-    flex: 0 0 35%;
+.pic {
+    /* flex: 0 0 45%; */
     display: flex;
-    justify-content: center;
+    /* justify-content: center;
     align-items: center;
-    padding: 1%;
+    padding: 1%;  */
 }
-.div-picture img {
-    max-width: 50%;
+.pic img {
+    max-width: 100%;
+    height: auto;
     padding: 5px 5px;
     border: azure solid 5px;
 }
 .subtitle {
-    /*kmre: Using flex to make a box for the background*/
+    /*kmre: Using flex to make a box for the background ^-^;; */
     display: flex;
     justify-content: flex-end;
     align-self: flex-end;
     padding: 0 2% 0 0;
-    flex: 0 0 65%;
+    /* flex: 0 0 65%; */
 }
 .font {
     font-size: small;
@@ -188,6 +190,59 @@ section {
     background-color: azure;
 }
 
+/* #about-me {
+    display: flex;
+}
+#work {
+    display: flex;
+}
+.left-side{
+display: flex;
+}
+.left-side h2{
+    width: 50%;
+}
+
+.right-side {
+display: flex;
+} */
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    padding: 2%;
+    width: 100%;
+    flex: 0 0 75%;
+    justify-content: space-between;
+}
+#about-me {
+    padding: 15px 5%;
+    font-family: var(--font);
+    background-color: var(--color2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--color4); 
+    width: 100%;
+}
+.left-side div {
+    padding: 1%;
+    flex: 3;
+}
+/*kmre: Header style for the navigation section*/
+.right-side p {
+    padding: 0 0 10px 0;
+    font-family: var(--font);
+    font-size: 23px;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-self: flex-end;
+    justify-content: flex-end;
+    flex: 5;
+}
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 

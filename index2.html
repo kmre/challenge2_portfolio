@@ -21,7 +21,7 @@
 
 <body>
     <!--kmre: Navigation Header-->
-    <div class="headers">
+    <header>
         <!--Div for Name Header-->
         <div>
             <h1>
@@ -47,19 +47,19 @@
                 </li>
             </ul>
         </nav>
-    </div>
+    </header>
     
     <!--kmre: Wraps around all elements to control width, paddings and margins -->
         <div class="main">
             <!--kmre: Add negative margin for when the screen is smaller the inside boxes
             are not as small -->
-            <div class="smaller-devices">
+            <!-- <div class="smaller-devices"> -->
                 <!--kmre: Primary column-->
-                <div class="primary col1">
+                <!-- <div class="primary"> -->
                         <!--kmre: Hero Section has image and subtitle-->
                         <section class="hero">
-                            <div class="div-picture">
-                                <img src="../challenge_2/assets/images/Screenshot 2021-05-30 205730.png" alt="My picture">
+                            <div class="pic">
+                                <img src="../challenge_2/assets/images/Screenshot 2021-05-30 205730.png" alt="My picture" width="200" height="200">
                             </div>
                             <div class="subtitle font">
                                 <h2>Newbie coder extraordinare! &#128517; </h2> 
@@ -70,11 +70,11 @@
                             <!--kmre: Sub-section 1 for About me-->
                             <article id="about-me">
                                     <!--kmre:Left side-->          
-                                     <div>     
+                                     <div class="left-side">     
                                         <h2>About Me</h2>
                                     </div>
                                     <!--kmre: Right side-->
-                                    <div>   
+                                    <div class="right-side">   
                                         <p>
                                             Write about me here.
                                         </p>
@@ -83,23 +83,23 @@
                             <!--kmre: Sub-section 2 for Work>-->
                             <article id="work">
                                 <!--kmre:Left side-->          
-                                <div>     
+                                <div class="left-side">     
                                     <h2>Work</h2>
                                 </div>
                                 <!--kmre: Right side-->
-                                <div>   
+                                <div class="right-side">   
                                     <p>
                                         More boxes with Work
                                     </p>
                                 </div>                    
                             </article>  
                         </section>
-                </div>
-            </div>
+                <!-- </div> -->
+            <!-- </div> -->
         </div>
     <!-- </div>         -->
     <!--kmre: Footer section-->
-    <div class="footer">
+    <footer>
         <div id="contact-me">
             <h1>Contact Me</h1>
         </div>
@@ -121,6 +121,6 @@
                 </li>
             </ul>
         </nav>
-    </div>
+    </footer>
 </body>
 </html>
