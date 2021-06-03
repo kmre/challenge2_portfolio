@@ -23,9 +23,7 @@
     <!--kmre: Navigation Header-->
     <header>
         <h1>
-            <!--kmre: Added the <a href> element. It can be commented out and just comment back in the code
-                below the <a> to just have text-->
-            <a href="#">Karla Romero</a>
+            Karla Romero
         </h1>
         <nav>
             <!--kmre: Unordered List element-->
@@ -35,7 +33,7 @@
                     <a href="#about-me" title="Click here to go to the About Me Section.">About Me</a>
                 </li>
                 <li>
-                    <a href="#Work" title="Click here to go to the Work-in-progress Section.">Work</a>
+                    <a href="#work" title="Click here to go to the Work-in-progress Section.">Work</a>
                 </li>
                 <li>
                     <a href="#contact-me" title="Click here to go to the Contact Section.">Contact Me</a>
@@ -89,34 +87,21 @@
         </article>
     </section>
     <!--kmre: Footer section-->
-    <footer>
-        <h1>
-            <!--kmre: Added the <a href> element. It can be commented out and just comment back in the code
-                below the <a> to just have text-->
-            <a id="contact-me">Contact me!</a>
-        </h1>
-        <div class="container_4">
-            <img src="./assets/images/Linkedin.png" alt="My Linkedin Profile" height="100" width="100">
+    <footer id="contact-me">
+        <h2 class="container_5">
+            Contact me!
+        </h2>
+        <div class="container_6">
+            <div class="container_4">
+                <a href="https://www.linkedin.com/in/romerokarla/" target="_blank"> <img src="./assets/images/Linkedin.png" alt="My Linkedin Profile" height="100" width="100"></a>
+            </div>
+            <p>
+                P: 787-597-9448 <br/>
+            </p>
+            <p>    
+                E: <a href="mailto:karla.romero7@gmail.com">karla.romero7@gmail.com</a>
+            </p>
         </div>
-        <nav>
-            <!--kmre: Unordered List element-->
-            <ul>
-                <!--kmre: List Items with referemce elements-->
-                <li>
-                    <a href="#about-me" title="Click here to go to the About Me Section.">About Me</a>
-                </li>
-                <li>
-                    <a href="#Work" title="Click here to go to the Work-in-progress Section.">Work</a>
-                </li>
-                <li>
-                    <a href="#contact-me" title="Click here to go to the Contact Section.">Contact Me</a>
-                </li>
-                <li>
-                    <a href="#resume" title="Click here to go to print a copy of my Resume.">Resume</a>
-                    <!-- <button onclick="window.print()">Print this page</button> -->
-                </li>
-            </ul>
-        </nav>
     </footer>
 </body>
 </html>
