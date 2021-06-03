@@ -86,19 +86,23 @@ header a, footer a {
 /*kmre: Style section for left section*/
 .content {
   display: flex;
-  flex-flow: wrap column;
-  /* justify-content: space-around; */
+  flex-flow: nowrap column;
+  justify-content: stretch;
   /* display: inline-block;
   margin-right: 20px; */
   order: 4;
 }
 article {
-  /* margin-bottom: 20px;
-  padding: 50px; */
-  height: 50%;
+  /* margin-bottom: 20px;*/
+  padding: 1% 0% 5% 0%; 
+  /* height: 50%; */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #0072bb;
   color: #ffffff;
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: flex-start;
+
   /* padding: 2% 10%; */
 }
 /* article img {
@@ -107,19 +111,21 @@ article {
 article h2 {
   font-size: 36px;
   text-align: right;
-  padding: 1% 3% 12% 10%;
-  margin: 1% 1% 0% 1%;
+  /* padding: 1% 3% 12% 10%;
+  margin: 1% 1% 0% 1%; */
   border-right: solid 5px white;
-  display: flex;
+  /* display: flex;
   flex-flow: column nowrap;
-  align-items: flex-end;
-  width: 25%;
+  align-items: flex-end; */
+  /* width: 25%; */
+  width: 500px;
 }
 article p {
   font-size: 16px;
-  padding: 10%
+  display: flex;
+  flex-flow: row wrap;
 }
-#about-me {
+/* #about-me {
   background: salmon;
   display: flex;
   align-items: flex-start;
@@ -129,16 +135,16 @@ article p {
   background: seagreen;
   display: flex;
   align-items: flex-start;
-}
+} */
 /*kmre: Classes for the image to float left or right*/
-.float-left {
+/* .float-left {
   float: left;
   margin-right: 25px;
 }
 .float-right {
   float: right;
   margin-left: 25px;
-}
+} */
 /*kmre: End float and left section*/
 
 /*kmre: Container*/
@@ -159,7 +165,7 @@ article p {
 }
 .container_3 {
 display: flex;
-max-width: 100%;
+/* max-width: 100%; */
 flex-flow: column nowrap;
 align-items: center;
 }
@@ -169,6 +175,13 @@ align-items: center;
   /* position: absolute; */
   top: 10%;
   left: 50%;
+}
+.container_5 {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    width: 15%;
+    padding: 1% 1% 5% 5%;
 }
 
 /*kmre: Start right side section for Benefits*/
