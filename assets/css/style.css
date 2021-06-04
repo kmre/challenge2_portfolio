@@ -18,7 +18,7 @@ body > * { /*Applies the flex property to the "main children" inside the body*/
 
 /*kmre: Header flex container and children*/
 header {
-  padding: 20px;
+  padding: 1% 2% 1% 5%;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: #2a607c;
   color: #ffffff;
@@ -40,18 +40,80 @@ header nav {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
   list-style-type: none;
-  align-self: flex-end;
-  justify-self: flex-end;
+  /* align-self: flex-end;
+  justify-self: flex-end; */
 }
 header nav ul li {
   display: inline-block;
   margin-left: 25px;
   margin-bottom: 5px;
-}
-/*kmre: Colors every a element inside header*/
-header a {
+}  
+ header a {
   color: #ffffff;
   text-decoration: none;
+} 
+
+/* unvisited link */
+ .link:link {
+  color: white;
+} 
+/* visited link */
+ .link:visited {
+  color: white;
+} 
+/* mouse over link */
+ .link:hover {
+  color: pink;
+  font-size: 150%;
+} 
+/* selected link */
+ .link:active {
+  color: purple;
+}
+/* li:hover {
+    background: seagreen;
+}  */
+
+/*kmre: Colors every a element inside header*/
+.class-a {
+background-color: yellowgreen;
+box-shadow: 0 2px 1px rgba(0,0,0,.2);
+color: #2980b9;
+display: block;
+font-weight: bold;
+margin-bottom: 20px;
+padding: 15px 0;
+text-align: center;
+text-decoration: none;
+text-transform: uppercase;
+}
+.class-a:hover {
+  color: pink;
+  box-shadow: 0 2px 1px rgba(0,0,0,.5);
+  font-size: 150%;
+}
+/*sweep to top*/
+.hvr-sweep {
+  position: relative;
+  transform: translateZ(0);
+  transition: color 1000ms;
+}
+  .hvr-sweep:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098d1;
+    transform: scaleY(0);
+    transform-origin: 50% 100%;
+    transition-property: transform;
+    transition: 300ms ease-out;
+  }
+  .class-a:hover:before{
+    transform: scaleY(1);
 }
 /*kmre: end header style*/
 
@@ -117,7 +179,7 @@ article p {
   width: fit-content;
   position: absolute;
   top: 20%;
-  left: 10%;
+  left: 25%;
 }
 .container_2 { /*Container for subtitle in hero section*/
   height:fit-content;
@@ -155,7 +217,7 @@ article p {
   width: 75%;
   padding: 1% 5% 1% 1%;
   border-left: solid 5px white;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .container_7 { /*Same as Container for div classes inside the articles but with flex row wrap*/
@@ -192,7 +254,7 @@ article p {
   
 /*kmre: Start footer*/
 footer{
-  padding: 1% 0% 5% 0%; 
+  padding: 1% 0% 1% 0%; 
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #00bb38;
   color: #ffffff;
@@ -206,21 +268,86 @@ footer h1 {
   text-align: right;
   width: 500px;
 }
-/*kmre: Header style for the navigation section*/
-footer nav {
-  padding-top: 15px;
-  margin-right: 25px;
-  margin-left: 25px;
-  text-align: right;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 20px;
-  list-style-type: none;
-  align-self: flex-end;
-  justify-self: flex-end;
+footer p {
+  font-size: 25px;
+  padding: 2% 5%;
 }
-footer nav ul li {
-  display: inline-block;
-  margin-left: 25px;
-  margin-bottom: 5px;
-}
+
 /*kmre: Colors every a element inside header*/
+    @media only screen and (max-width: 830px) {
+      header {
+          background-color: red;
+          justify-content: space-evenly;
+          padding: 1% 1% 1% 1%;
+      }
+      header h1 {
+          font-size: 39px;
+          padding: 0 0% 0 4%;
+      }
+      header nav {
+          padding: 1% 0% 0% 0%;
+          margin-right: 25px;
+          margin-left: 25px;
+          text-align: right;
+          font-size: 20px;
+        }
+        .container_1 {
+          height: fit-content;
+          width: fit-content;
+          position: absolute;
+          top: 17%;
+          left: 23%;
+      }
+    }
+
+    @media only screen and (max-width: 675px) {
+      header {
+          background-color: cornflowerblue;
+          /* display: flex;
+          flex-flow: row wrap; */
+          justify-content: center;
+      }
+      header h1 {
+          /* background-color: cornflowerblue;
+          text-align: center; */
+          font-size: 35px;
+          /* padding: 0% 1% 0% 0%; */
+      }
+      header nav ul {
+          text-align: center;
+          margin: 0%;
+          padding: 1% 0 0 0%;
+      }
+      header nav ul li {
+          margin: 0 5px 0 5px;
+      }
+      .container_1 {
+          height: fit-content;
+          width: fit-content;
+          position: absolute;
+          top: 17%;
+          left: 23%;
+      }
+      .container_5 { /*Container for the h2 class inside the articles*/
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: flex-end;
+          width: 20%;
+          padding: 1% 1% 5% 1%;
+          font-size: 19PX;
+      }
+      /* article h2 {
+          font-size: 36px;
+          text-align: right;
+          width: 500px;
+        } */
+        .container_4 { /*Container for the Linkedin image inside footer*/
+          height:fit-content;
+          width: fit-content;
+          top: 10%;
+          left: 50%;
+          padding: 1%;
+        }
+  }
+
+
