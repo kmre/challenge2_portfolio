@@ -4,28 +4,47 @@
   margin: 0;
 }
 
+/*variables for color scheme*/
+:root {
+  --color1: #90F3FF;
+  --color2: #68EDC6;
+  --color3: #90BEDE;
+  --color4: #DFFDFF;
+  --color5: #E5E1EE;
+  --color_1: #3066BE;
+  --color_2: #119DA4;
+  --color_3: #6D9DC5;
+  --color_4: #80DED9;
+  --color_5: #AEECEF;
+  --shadow: rgba(0,0,0,.2);
+  --font1: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*End variables*/
 /*kmre: Body flex container and the main items are it's childrens*/
 body {
-  background-color: #d9dcd6;
+  background-color: var(--color_5);
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 body > * { /*Applies the flex property to the "main children" inside the body*/
   flex: 1 1 auto;
+  background-color: var(--color_1);
 }
 /* End flex container for body*/
 
 /*kmre: Header flex container and children*/
 header {
   padding: 1% 2% 1% 5%;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: #2a607c;
-  color: #ffffff;
+  font-family: var(--font1);
+  background-color: var(--color_1);
+  color: var(--color4);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   order: 1;
+  align-items: center;
 }
 header h1 {
   display: inline-block;
@@ -37,66 +56,58 @@ header nav {
   margin-right: 25px;
   margin-left: 25px;
   text-align: right;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: var(--font1);
   font-size: 20px;
   list-style-type: none;
-  /* align-self: flex-end;
-  justify-self: flex-end; */
 }
 header nav ul li {
   display: inline-block;
   margin-left: 25px;
   margin-bottom: 5px;
 }  
- header a {
-  color: #ffffff;
-  text-decoration: none;
-} 
-
+/*Color for the email link*/
 /* unvisited link */
  .link:link {
-  color: white;
+  color: var(--color_2);
 } 
 /* visited link */
  .link:visited {
-  color: white;
+  color: var(--color_1);
 } 
 /* mouse over link */
  .link:hover {
-  color: pink;
-  font-size: 150%;
+  color: var(--color_3);
+  /* font-size: 150%; */
 } 
 /* selected link */
  .link:active {
-  color: purple;
+  color: var(--color_2);
 }
-/* li:hover {
-    background: seagreen;
-}  */
-
-/*kmre: Colors every a element inside header*/
+/*kmre: Colors every a element inside <a> in the header*/
 .class-a {
-background-color: yellowgreen;
-box-shadow: 0 2px 1px rgba(0,0,0,.2);
-color: #2980b9;
+background-color: var(--color_1);
+box-shadow: 10px 20px 10px var(--shadow);
+color: var(--color_5);
 display: block;
 font-weight: bold;
 margin-bottom: 20px;
-padding: 15px 0;
+padding: 15px 10px;
 text-align: center;
 text-decoration: none;
 text-transform: uppercase;
 }
+/*hover*/
 .class-a:hover {
-  color: pink;
-  box-shadow: 0 2px 1px rgba(0,0,0,.5);
-  font-size: 150%;
-}
-/*sweep to top*/
-.hvr-sweep {
+  color: var(--color_5);
+  box-shadow: 5px 10px 15px var(--shadow);
   position: relative;
   transform: translateZ(0);
   transition: color 1000ms;
+  font-size: 105%;
+}
+  /*sweep to top*/
+  .class-a:hover:before{
+    transform: scaleY(1);
 }
   .hvr-sweep:before {
     content: "";
@@ -106,17 +117,13 @@ text-transform: uppercase;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #2098d1;
+    background: var(--color_1);
     transform: scaleY(0);
     transform-origin: 50% 100%;
     transition-property: transform;
     transition: 300ms ease-out;
   }
-  .class-a:hover:before{
-    transform: scaleY(1);
-}
 /*kmre: end header style*/
-
 /*kmre: Hero section image*/
 .hero {
   height: 350px;
@@ -133,33 +140,27 @@ text-transform: uppercase;
 }
 .hero img {
   padding: 2%;
-  border: ivory solid 3px;
+  border: var(--color2) solid 5px;
 }
-.hero h2 {
-  background-origin: padding-box;
-  height: 13%;
-  width: 20%;
-  padding: 1%;
-  align-self: flex-end;
-  flex: 1 1 auto;
+.hero h1 {
+  color: var(--color_1);
 }
 /*kmre: End Hero section*/
-
-/*kmre: Style section for Content*/
-/*kmre: Main Box .content*/
+/*kmre: Style section for Content
+  kmre: Main Box .content*/
 .content {
   display: flex;
   flex-flow: nowrap column;
   justify-content: stretch;
+  font-family: var(--font1);
   order: 4;
 }
 /*kmre: .article creates a box around the "About Me" and "Work" sections
 independently*/
 article {
   padding: 1% 0% 5% 0%; 
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #0072bb;
-  color: #ffffff;
+  background-color: var(--color_2);
+  color: var(--color4);
   display: flex;
   flex-flow: nowrap row;
   align-items: flex-start;
@@ -187,7 +188,9 @@ article p {
   position: absolute;
   bottom: 10%;
   right: 20%;
-  background-color: deeppink;
+  padding: 5px;
+  border: var(--color_2) dashed 4px;
+  background-color: var(--color_5);
 }
 .container_3 { /*Container for div classes inside the articles*/
   display: flex;
@@ -195,7 +198,8 @@ article p {
   align-items: stretch;
   width: 75%;
   padding: 1% 5% 1% 3%;
-  border-left: solid 5px white;
+  border-left: solid 5px var(--color_3);
+  list-style-type: none;
 }
 .container_4 { /*Container for the Linkedin image inside footer*/
   height:fit-content;
@@ -216,14 +220,13 @@ article p {
   align-items: center;
   width: 75%;
   padding: 1% 5% 1% 1%;
-  border-left: solid 5px white;
+  border-left: solid 5px var(--color_3);
   justify-content: space-around;
 }
-
 .container_7 { /*Same as Container for div classes inside the articles but with flex row wrap*/
   width: 75%;
   padding: 1% 5% 1% 3%;
-  border-left: solid 5px white;
+  border-left: solid 5px var(--color_3);
   display: flex;
   flex-flow: row wrap;
 }
@@ -236,13 +239,13 @@ article p {
 }
 .container_9 { /*Container for text inside run buddy*/
   padding: 1% 5% 1% 1%;
-  border-left: solid 5px white;
+  border-left: solid 5px var(--color4);
   position: absolute;
   right: 10%;
   bottom: 5%;
   font-size: 150%;
-  background-color: yellow;
-  color: black;
+  background-color: var(--color_1);
+  color: var(--color_4);
 } 
 .container_10 { /*Same as Container for div classes inside the articles but with flex row wrap*/
   display: flex;
@@ -251,13 +254,24 @@ article p {
   width: 50%;
   padding: 1% 1% 0% 1%;
 }
-  
+.future-work {
+background: rgba(255, 255, 255, 0.2);
+}
+.container_animation { /*Animation for Work container*/
+transition: opacity 100ms;
+}
+.container_animation:hover {
+/* animation: change 4s infinite;
+animation-timing-function: linear; */
+box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+opacity: .5;
+}
 /*kmre: Start footer*/
 footer{
   padding: 1% 0% 1% 0%; 
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: #00bb38;
-  color: #ffffff;
+  font-family: var(--font1);
+  background-color: var(--color_4);
+  color: var(--color_2);
   display: flex;
   flex-flow: nowrap row;
   align-items: flex-start;
@@ -272,11 +286,12 @@ footer p {
   font-size: 25px;
   padding: 2% 5%;
 }
-
-/*kmre: Colors every a element inside header*/
+footer a {
+text-decoration: none;
+}
+/*kmre: changes properties based on device size*/
     @media only screen and (max-width: 830px) {
       header {
-          background-color: red;
           justify-content: space-evenly;
           padding: 1% 1% 1% 1%;
       }
@@ -299,34 +314,36 @@ footer p {
           left: 23%;
       }
     }
-
     @media only screen and (max-width: 675px) {
       header {
-          background-color: cornflowerblue;
-          /* display: flex;
-          flex-flow: row wrap; */
           justify-content: center;
       }
       header h1 {
-          /* background-color: cornflowerblue;
-          text-align: center; */
           font-size: 35px;
-          /* padding: 0% 1% 0% 0%; */
       }
       header nav ul {
           text-align: center;
           margin: 0%;
-          padding: 1% 0 0 0%;
+          padding: .5% 0 0 0%;
       }
-      header nav ul li {
-          margin: 0 5px 0 5px;
+      .class-a {
+          margin: 0px;
+          padding: 0 5px 0 5px;
+          font-size: 15px;
       }
-      .container_1 {
+      footer div p {
+        font-size: 15px;
+        padding: 0% 10%;
+      }
+      .container_1 { /*Container for image in hero section*/
           height: fit-content;
           width: fit-content;
           position: absolute;
           top: 17%;
           left: 23%;
+      }
+      .container_2 { /*Container for subtitle in hero section*/
+          font-size: 17px;
       }
       .container_5 { /*Container for the h2 class inside the articles*/
           display: flex;
@@ -334,13 +351,8 @@ footer p {
           align-items: flex-end;
           width: 20%;
           padding: 1% 1% 5% 1%;
-          font-size: 19PX;
+          font-size: 16px;
       }
-      /* article h2 {
-          font-size: 36px;
-          text-align: right;
-          width: 500px;
-        } */
         .container_4 { /*Container for the Linkedin image inside footer*/
           height:fit-content;
           width: fit-content;
@@ -348,6 +360,46 @@ footer p {
           left: 50%;
           padding: 1%;
         }
+        .container_9 {
+          font-size: 15px;
+        }
   }
+
+/*Playing with animation code: Adding a fill to the background of hero img and making bigger when hover*/
+/* .hvr-size {
+display: inline-block;
+vertical-align: middle;
+transform: perspective(1px) translateZ(1);
+box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+overflow: hidden;
+transition-duration: 0.5s;
+transition-property: color, background-color, width, height;
+
+}
+.hvr-size:hover {
+animation-name: hvr-size;
+animation-duration: 1s;
+animation-delay: 0.5s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+background-color: #2098D1;
+color: white;
+width: 30%;
+height: 30%;
+}
+
+.container_animation:hover {
+animation: change 4s infinite;
+animation-timing-function: linear;
+}
+
+@keyframes change {
+from {background-color: palevioletred;}
+to {background-color: rgb(0, 128, 75);}
+} */
+/**************************/
+
+
+
 
 
