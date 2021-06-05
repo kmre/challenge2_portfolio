@@ -56,7 +56,6 @@ header nav {
   margin-right: 25px;
   margin-left: 25px;
   text-align: right;
-  font-family: var(--font1);
   font-size: 20px;
   list-style-type: none;
 }
@@ -117,7 +116,7 @@ text-transform: uppercase;
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--color_1);
+    background: var(--color_2);
     transform: scaleY(0);
     transform-origin: 50% 100%;
     transition-property: transform;
