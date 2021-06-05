@@ -257,13 +257,15 @@ article p {
 background: rgba(255, 255, 255, 0.2);
 }
 .container_animation { /*Animation for Work container*/
-transition: opacity 100ms;
+transition: opacity 100ms transform .2s;
 }
 .container_animation:hover {
 /* animation: change 4s infinite;
 animation-timing-function: linear; */
 box-shadow: 0 0 10px rgba(0, 0, 0, .7);
 opacity: .5;
+transform: scale(1.05);
+z-index: 1;
 }
 /*kmre: Start footer*/
 footer{

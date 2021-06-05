@@ -1,7 +1,7 @@
 # challenge2_portfolio
 Challenge 2 
 
-Create a Porfolio from scratch and modify to complete objective. 
+Create a Portfolio from scratch and modify to complete objective. 
 
 Objective: 
 In this Challenge you’ll set yourself up for future success by applying the core skills you've recently learned: 
@@ -28,7 +28,7 @@ Things added:
     1. Added flex-boxes/containers to allow for the content to expand and contract evenly.
     2. Added links that point to external sites and one that takes you to a PDF.
     3. Added CSS variables to style the HTML.
-    4. Used media queries to allow for the contect to change and adjust based on the size of the screen.
+    4. Used media queries to allow for the content to change and adjust based on the size of the screen.
 
 
 Link to deployed app:
