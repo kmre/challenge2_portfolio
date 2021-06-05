@@ -42,5 +42,5 @@ Link to repository:
     [GitHub CLI](gh repo clone kmre/challenge2_portfolio)
     
 Screenshot:
-    ~~![WebPage Screenshot](./assets/images/screenshot-kmre.github.io-2021.05.25-18_39_45.png?raw=true "Screenshot")~~
+    ~~![WebPage Screenshot](./assets/images/screencapture-file-C-Users-karla-Desktop-coding-class-Challanges-challenge-2-index-html-2021-06-04-23_39_41.png?raw=true "Screenshot")~~
 
